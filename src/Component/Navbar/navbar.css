@@ -1,40 +1,58 @@
-ul {
+.list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 a {
-    border-bottom: none !important;
-} 
+  border-bottom: none !important;
+}
 
 #container {
   display: flex;
   background-color: #333;
   justify-content: space-between;
-  margin-top: 5%;
+  margin-top: 3.5%;
   width: 100vw;
 }
 
 .h2 {
   color: #ffffff;
-  padding: 20px 15px;
+  padding-left: 20px;
+  margin-bottom: 0;
 }
 
 .left,
 .right {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ul li {
-    padding-left: 0rem !important;
+  padding-left: 0rem !important;
 }
 
-li {
+.list li {
   float: left;
   text-decoration: none;
   list-style: none;
 }
 
+.share li {
+  float: left;
+  text-decoration: none;
+  list-style: none;
+}
+.back li {
+  float: left;
+  text-decoration: none;
+  list-style: none;
+}
+.download li {
+  float: left;
+  text-decoration: none;
+  list-style: none;
+}
 .list a {
   display: block;
   color: white;
@@ -50,17 +68,23 @@ li {
 
 .left .list {
   border: 1px solid #575d69;
-  margin: 19px;
+  margin: 6px;
   border-radius: 5px;
   padding: 0;
+  height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left i {
   border: 1px solid #575d69;
-  margin: 12px 0 12px 0;
-  padding: 14px;
+  padding: 11px;
   color: #ffffff;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left i:hover {
@@ -72,7 +96,7 @@ li {
 .right .download,
 .right .back {
   border: 1px solid #575d69;
-  margin: 10px;
+  margin: 6px;
   border-radius: 5px;
   padding: 12px;
 }
@@ -82,13 +106,21 @@ li {
   color: #ffffff;
 }
 
-.button,
-.button1 {
-  background-color: #1877f2;
+.likeBtn,
+.tweetBtn {
+  background-color: #1877f2 ;
   color: #ffffff;
   border: none;
-  padding: 4px 9px 4px 8px;
+  /* padding: 4px 9px 4px 8px; */
   border-radius: 5px;
+  text-transform: none ;
+  height: 22px ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  width: 60px ;
+  padding: 0 ;
+  cursor: pointer;
 }
 
 .button1 {

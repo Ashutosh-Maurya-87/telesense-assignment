@@ -1,5 +1,8 @@
 import React from "react";
 import './navbar.css'
+import {AiFillLike} from 'react-icons/ai'
+import {BsBoxArrowUpRight} from 'react-icons/bs'
+import {FaTwitter} from 'react-icons/fa'
 const Navbar = () => {
   return (
     <div id="container">
@@ -23,24 +26,29 @@ const Navbar = () => {
         </ul>
         <a href="">
           {" "}
-          <i className="fa-solid fa-arrow-up-right-from-square"></i>
+          
+          <i className="fa-solid fa-arrow-up-right-from-square">
+          <BsBoxArrowUpRight />
+          </i>
         </a>
       </div>
       <div className="right">
-        <ul className="share">
+        <ul className="share ">
           <li className="like">
-            <a href="https://www.facebook.com/">
-              <button className="button">
-                <i className="fa-solid fa-thumbs-up"></i>
+            <a href="https://www.facebook.com/" target="blank">
+              <button className="likeBtn cursor-pointer" >
+                <AiFillLike color="white"/>
+                {/* <i className="fa-solid fa-thumbs-up"></i> */}
                 Like
               </button>
             </a>
           </li>
 
           <li className="tweet">
-            <a href="https://www.twitter.com/">
-              <button className="button1">
-                <i className="fa-brands fa-twitter"></i>Tweet
+            <a href="https://www.twitter.com/" target="blank">
+              <button className="tweetBtn cursor-pointer"  >
+                <FaTwitter color="white"/>Tweet
+                {/* <i className="fa-brands fa-twitter"></i>Tweet */}
               </button>
             </a>{" "}
           </li>
