@@ -23,27 +23,23 @@ import eightImage8 from "../../assets/images/gallery/thumbs/08.jpg";
 import nineImage9 from "../../assets/images/gallery/thumbs/09.jpg";
 
 const Home = (props) => {
-  const { mobile, tabletP, tabletMode, desktopMode, responsiveWidthScreen } =
-    props;
-  console.log("width", mobile, tabletP, tabletMode, desktopMode);
+  const { responsiveWidthScreen, styleHome } = props;
 
   const responsiveWidth = {
     width: `${responsiveWidthScreen}px`,
-    /* background-color: red; */
-    /* padding: 10px; */
     border: "20px solid white",
-    borderRadius: "18px"
+    borderRadius: "18px",
+  };
+
+  const desktopDesign = {
+    width: `${responsiveWidthScreen}px`,
   };
   return (
     <>
       {/* // <!-- Page Wrapper --> */}
       <div id="page-wrapper">
         {/* <!-- Wrapper --> */}
-        <div
-          id="wrapper"
-          style={responsiveWidth}
-          // style={{width: '768px'}}
-        >
+        <div id="wrapper" style={styleHome ? desktopDesign : responsiveWidth}>
           {/* <!-- Panel (Banner) --> */}
           <section className="panel banner right">
             <div className="content color0 span-3-75">

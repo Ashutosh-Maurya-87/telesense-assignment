@@ -5,42 +5,34 @@ import Navbar from "./Component/Navbar";
 import Home from "./Component/Home";
 
 function App() {
-  const [desktopMode, setDesktopMode] = useState("");
-  const [tabletMode, setTabletMode] = useState("");
-  const [tabletP, setTabletP] = useState("");
-  const [mobile, setMobile] = useState("");
   const [responsiveWidth, setResponsiveWidth] = useState("");
+  const [styleHome, setStyleHome] = useState(true);
   const handleDesktopMode = () => {
-    console.log(window.screen.availWidth);
     setResponsiveWidth(window.screen.availWidth);
+    setStyleHome(true);
   };
   const handleTablet = () => {
-    setResponsiveWidth('768');
-    console.log(window.screen.availWidth);
+    setResponsiveWidth("768");
+    setStyleHome(false);
   };
   const handleTabletP = () => {
-    setResponsiveWidth('1024');
-
-    console.log(window.screen.availWidth);
+    setResponsiveWidth("1024");
+    setStyleHome(false);
   };
   const handleMobile = () => {
-    setResponsiveWidth('480');
-    console.log(window.screen.availWidth);
+    setResponsiveWidth("480");
+    setStyleHome(false);
   };
   return (
     <>
       <Navbar
-        setDesktopMode={setDesktopMode}
         handleDesktopMode={handleDesktopMode}
         handleTablet={handleTablet}
         handleTabletP={handleTabletP}
         handleMobile={handleMobile}
       />
       <Home
-        desktopMode={desktopMode}
-        tabletMode={tabletMode}
-        tabletP={tabletP}
-        mobile={mobile}
+        styleHome={styleHome}
         setResponsiveWidth={setResponsiveWidth}
         responsiveWidthScreen={responsiveWidth}
       />
