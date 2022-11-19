@@ -1,9 +1,8 @@
-import React from "react";
-import './navbar.css'
-import {AiFillLike} from 'react-icons/ai'
-import {BsBoxArrowUpRight} from 'react-icons/bs'
-import {FaTwitter} from 'react-icons/fa'
-const Navbar = () => {
+import React, { useState } from "react";
+import "./navbar.css";
+const Navbar = (props) => {
+  const { handleDesktopMode, handleMobile, handleTablet, handleTabletP } =
+    props;
   return (
     <div id="container">
       <div className="left">
@@ -11,34 +10,30 @@ const Navbar = () => {
           <span>Ethereal</span>
         </h2>
         <ul className="list">
-          <li>
+          <li onClick={handleDesktopMode}>
             <a href="#">Desktop</a>
           </li>
-          <li>
+          <li onClick={handleTablet}>
             <a href="#">Tablet</a>
           </li>
-          <li>
+          <li onClick={handleTabletP}>
             <a href="#">Tablet (Portrait)</a>
           </li>
-          <li>
+          <li onClick={handleMobile}>
             <a href="#">Mobile</a>
           </li>
         </ul>
         <a href="">
           {" "}
-          
-          <i className="fa-solid fa-arrow-up-right-from-square">
-          <BsBoxArrowUpRight />
-          </i>
+          <i className="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
       </div>
       <div className="right">
         <ul className="share ">
           <li className="like">
             <a href="https://www.facebook.com/" target="blank">
-              <button className="likeBtn cursor-pointer" >
-                <AiFillLike color="white"/>
-                {/* <i className="fa-solid fa-thumbs-up"></i> */}
+              <button className="likeBtn cursor-pointer">
+                <i className="fa-solid fa-thumbs-up"></i>
                 Like
               </button>
             </a>
@@ -46,17 +41,16 @@ const Navbar = () => {
 
           <li className="tweet">
             <a href="https://www.twitter.com/" target="blank">
-              <button className="tweetBtn cursor-pointer"  >
-                <FaTwitter color="white"/>Tweet
-                {/* <i className="fa-brands fa-twitter"></i>Tweet */}
+              <button className="tweetBtn cursor-pointer">
+                <i className="fa-brands fa-twitter"></i>Tweet
               </button>
             </a>{" "}
           </li>
         </ul>
-        <ul className="back">
+        <ul className="back cursor-pointer">
           <li> Back</li>
         </ul>
-        <ul className="download">
+        <ul className="download cursor-pointer">
           <li className="dwld">
             {" "}
             <strong>Download </strong>(200,925)

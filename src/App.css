@@ -5,16 +5,16 @@
   font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
-body {
+/* body {
   overflow-x: scroll;
 }
 
 /* Wrapper */
 
-body.is-preload #wrapper {
+/* body.is-preload #wrapper {
   -moz-transform: none;
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
   opacity: 1;
-}
+}  */

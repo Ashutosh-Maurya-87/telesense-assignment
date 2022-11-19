@@ -1,13 +1,5 @@
 import React from "react";
 import "./home.css";
-import { SlDiamond } from "react-icons/sl";
-import { FaRegGem } from "react-icons/fa";
-import { TfiCamera } from "react-icons/tfi";
-import { AiTwotoneSetting } from "react-icons/ai";
-import { FaPaperPlane } from "react-icons/fa";
-import { FaChartBar } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
 import girlImage from "../../assets/images/girlFace.jpg";
 import girlHalf from "../../assets/images/girlHalfImage.jpg";
 import boyImage from "../../assets/images/boyImage.jpg";
@@ -30,13 +22,28 @@ import sevenImage7 from "../../assets/images/gallery/thumbs/07.jpg";
 import eightImage8 from "../../assets/images/gallery/thumbs/08.jpg";
 import nineImage9 from "../../assets/images/gallery/thumbs/09.jpg";
 
-const Home = () => {
+const Home = (props) => {
+  const { mobile, tabletP, tabletMode, desktopMode, responsiveWidthScreen } =
+    props;
+  console.log("width", mobile, tabletP, tabletMode, desktopMode);
+
+  const responsiveWidth = {
+    width: `${responsiveWidthScreen}px`,
+    /* background-color: red; */
+    /* padding: 10px; */
+    border: "20px solid white",
+    borderRadius: "18px"
+  };
   return (
     <>
       {/* // <!-- Page Wrapper --> */}
       <div id="page-wrapper">
         {/* <!-- Wrapper --> */}
-        <div id="wrapper">
+        <div
+          id="wrapper"
+          style={responsiveWidth}
+          // style={{width: '768px'}}
+        >
           {/* <!-- Panel (Banner) --> */}
           <section className="panel banner right">
             <div className="content color0 span-3-75">
@@ -57,7 +64,6 @@ const Home = () => {
                     href="#first"
                     className="button primary color1 circle icon solid fa-angle-right"
                   >
-                    <FaAngleRight color="#726193" />
                     Next
                   </a>
                 </li>
@@ -102,37 +108,31 @@ const Home = () => {
               <ul className="grid-icons three connected">
                 <li>
                   <span className="icon fa-gem">
-                    <FaRegGem className="diamondIcon" />
                     <span className="label">Lorem</span>
                   </span>
                 </li>
                 <li>
                   <span className="icon solid fa-camera-retro">
-                    <TfiCamera className="cameraIcon" />
                     <span className="label">Ipsum</span>
                   </span>
                 </li>
                 <li>
                   <span className="icon solid fa-cog">
-                    <AiTwotoneSetting className="settingIcon" />
                     <span className="label">Dolor</span>
                   </span>
                 </li>
                 <li>
                   <span className="icon solid fa-paper-plane">
-                    <FaPaperPlane className="messageIcon" />
                     <span className="label">Sit</span>
                   </span>
                 </li>
                 <li>
                   <span className="icon solid fa-chart-bar">
-                    <FaChartBar className="graphIcon" />
                     <span className="label">Amet</span>
                   </span>
                 </li>
                 <li>
                   <span className="icon solid fa-code">
-                    <FaCode className="codeIcon" />
                     <span className="label">Nullam</span>
                   </span>
                 </li>
@@ -343,16 +343,14 @@ const Home = () => {
 
                 <h4>Preformatted</h4>
                 <pre>
-                  {
-                    //  <script>
-                    //                              i = 0;
-                    //  while (!deck.isInOrder()) {
-                    //     print 'Iteration ' + (i++);
-                    //     deck.shuffle();
-                    // }
-                    // {/* print 'It took ' + i + ' iterations to sort the deck.'; */}
-                    // </script>
-                  }
+                  <code>
+                    i = 0; <br />
+                    <br />
+                    while (!deck.isInOrder()) print("Iteration ") + i++
+                    deck.shuffle();
+                    <br />
+                    print 'It took ' + i + ' iterations to sort the deck.';
+                  </code>
                 </pre>
               </div>
               <div className="span-1-25">
@@ -585,13 +583,12 @@ const Home = () => {
                       href="#"
                       className="button primary color2 icon solid fa-cog"
                     >
-                      <AiTwotoneSetting />
                       Icon
                     </a>
                   </li>
                   <li>
                     <a href="#" className="button icon fa-gem">
-                      <FaRegGem /> Icon
+                      Icon
                     </a>
                   </li>
                 </ul>
@@ -611,13 +608,12 @@ const Home = () => {
                       href="#"
                       className="button primary color2 circle icon solid fa-cog"
                     >
-                      <AiTwotoneSetting />
                       Icon
                     </a>
                   </li>
                   <li>
                     <a href="#" className="button circle icon fa-gem">
-                      <FaRegGem /> Icon
+                      Icon
                     </a>
                   </li>
                 </ul>
